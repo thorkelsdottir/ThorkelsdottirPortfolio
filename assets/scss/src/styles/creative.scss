@@ -1,0 +1,65 @@
+.bigPicoverlay {
+  background: rgba(30, 90, 255, 0.3);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+.bigPic {
+  height: 100vh;
+  overflow-y: hidden;
+  z-index: 2;
+  position: fixed;
+  bottom: 0;
+  width: 10700px;
+}
+.bigPic img {
+  height: 100%;
+}
+.textOver {
+  h2 {
+    font-size: 30px;
+    color: $green;
+    font-family: 'roboto', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+  }
+  .texti1 {
+  top: 120px;
+  z-index: 4;
+  position: fixed;
+  margin-left: 800px;
+  width: 400px;
+  }
+  .texti2 {
+  top: 520px;
+  z-index: 4;
+  position: fixed;
+  margin-left: -800px;
+  width: 400px;
+  }
+}
+.active .texti1, .active .texti2 {
+  display: none;
+}
+.pageTitleCreative
+{
+  text-decoration: none;
+  position: fixed;
+  margin-left: 1500px;
+  h1 {
+    font-size: 90px;
+    line-height: 1.25;
+    font-weight: 700;
+  }
+  background: linear-gradient(330deg, $white 0%, $white 40%, $white 50%, $green 90%, $green 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Maven Pro', sans-serif;
+  opacity: 1;
+  bottom: -14px;
+  z-index: 5;
+  width: 5000px;
+}

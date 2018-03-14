@@ -1,0 +1,506 @@
+
+/*menu-ið */
+.menu-button {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 30px;
+  left: 96.6%;
+  float: right;
+  cursor: pointer;
+  z-index: 6;
+  @media #{$large-only} {
+    left: 96%;
+   }
+  @media #{$medium-only} {
+    left: 94%;
+   }
+  @media #{$small-only} {
+    left: 88%;
+   }
+}
+.menu-button2 {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 30px;
+  left: 96.6%;
+  float: right;
+  cursor: pointer;
+  z-index: 6;
+  @media #{$large-only} {
+    left: 96%;
+   }
+  @media #{$medium-only} {
+    left: 94%;
+   }
+  @media #{$small-only} {
+    left: 88%;
+    display: none;
+   }
+}
+.menu-button3 {
+  display: none;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 30px;
+  left: 96.6%;
+  float: right;
+  cursor: pointer;
+  z-index: 6;
+  @media #{$large-only} {
+    display: none;
+    left: 96%;
+   }
+  @media #{$medium-only} {
+    display: none;
+    left: 94%;
+   }
+  @media #{$small-only} {
+    display: block;
+    left: 88%;
+   }
+}
+.myNavmenu, .myNavmenu2 {
+  left: -5px;
+  z-index: 4;
+  position: absolute;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.myNavmenu:before, .myNavmenu:after {
+  background: $white;
+  width: 28px;
+  height: 3px;
+}
+
+.myNavmenu2:before, .myNavmenu2:after {
+  background: $dark;
+  width: 28px;
+  height: 3px;
+}
+
+@-webkit-keyframes menu-load-state-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes menu-load-state-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes menu-active-slide {
+  0% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes top-rot-in {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+}
+
+@-webkit-keyframes bot-rot-in {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+}
+
+.myNavmenu:before, .myNavmenu2:before {
+  content: '';
+  position: absolute;
+  top: -13px;
+  -webkit-animation: menu-load-state-top .5s;
+          animation: menu-load-state-top .5s;
+}
+.myNavmenu:after, .myNavmenu2:after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  -webkit-animation: menu-load-state-bottom .5s;
+          animation: menu-load-state-bottom .5s;
+}
+.myNavmenu b {
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 700;
+  color: $white;
+  display: none;
+  top: -6px;
+  left: 0;
+  font-size: 9.5px;
+  text-transform: uppercase;
+  position: relative;
+  -webkit-transition: all 0.02s 0.02s ease-in;
+  transition: all 0.02s 0.02s ease-in;
+  -webkit-transition-delay: .02s;
+          transition-delay: .02s;
+}
+.myNavmenu2 b {
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 700;
+  color: $dark;
+  display: none;
+  top: -6px;
+  left: 0;
+  font-size: 9.5px;
+  text-transform: uppercase;
+  position: relative;
+  -webkit-transition: all 0.02s 0.02s ease-in;
+  transition: all 0.02s 0.02s ease-in;
+  -webkit-transition-delay: .02s;
+          transition-delay: .02s;
+}
+
+.myNavmenu, .myNavmenu2 {
+  background: transparent;
+  -webkit-transition: all 0.15s 0 ease-out;
+  transition: all 0.15s 0 ease-out;
+}
+
+.myNavmenu b, .myNavmenu2 b {
+  display: block;
+}
+
+.myNavThork {
+  position: fixed;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+  display: none;
+  background: rgba(33, 36, 93, 0.6);
+  width: 100%;
+  height: 100%;
+  z-index: 6;
+  top: 0;
+  // opacity: 1;
+}
+.active .myNavThork  {
+  display: block;
+}
+.sub-menu {
+  list-style: none;
+}
+// .sub-menu ul{
+//   margin-top: 100px;
+  // background: linear-gradient(330deg, #FFE6F5 0%, #FFE6F5 40%, $white 50%, $green 75%, $green 100%);
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+// }
+
+.sub-menu ul {
+    margin-top: 100px;
+  a {
+    @include x-linear-gradient('135deg', $gradMid, $gradMid, $gradDark);
+    background-clip: text;
+    color: transparent;
+    // background: linear-gradient(320deg, #FFC4D1 10%, #FFC4D1 40%, $white 50%, $green 85%, $green 90%);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    @media screen and (max-width: 960px){
+      @include x-linear-gradient('135deg', $gradMid, $gradMid, $gradDark);
+      background-clip: text;
+      color: transparent;
+     }
+  }
+}
+
+.sub-menu li {
+  display: block;
+  &:hover {
+    background: rgba(33, 36, 93, 0.2);
+  }
+  a {
+  margin-left: 12%;
+  text-decoration: none;
+  font-size: 110px;
+  line-height: 1.1;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+    &:hover {
+      -webkit-text-fill-color: $pink;
+    }
+    @media #{$large-only} {
+      font-size: 90px;
+      margin-left: 12%;
+     }
+     @media #{$medium-only} {
+       font-size: 70px;
+       margin-left: 12%;
+      }
+    @media #{$small-only} {
+      font-size: 36px;
+      margin-left: 10%;
+     }
+  }
+}
+.active .myNavmenu:before, .active .myNavmenu2:before  {
+  top: -10px;
+  left: 5px;
+  -webkit-animation: top-rot-in .5s forwards;
+          animation: top-rot-in .5s forwards;
+}
+.active .myNavmenu:after, .active .myNavmenu2:after {
+  top: 10px;
+  left: 5px;
+  -webkit-animation: bot-rot-in .5s forwards;
+          animation: bot-rot-in .5s forwards;
+}
+.active .myNavmenu b, .active .myNavmenu2 b {
+  display: none;
+  -webkit-transition: all 0.10s 0 ease-out;
+  transition: all 0.10s 0 ease-out;
+}
+.active .frontpageTitle {
+  display: none;
+}
+
+.active .sub-menu {
+  display: block;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+  -webkit-animation: menu-active-slide .25s;
+          animation: menu-active-slide .25s;
+}
+li.each_nav_item:hover {
+  background: rgba(33, 36, 93, 0.3);
+}
+.titleLogo {
+  display: block;
+  h1 {
+    a{
+      color: $dark;
+      font-size: 22px;
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      @media #{$small-only} {
+        font-size: 18px;
+       }
+    }
+  }
+  margin-top: 70px;
+  float: left;
+  margin-left: -80px;
+  position: fixed;
+  list-style: none;
+  text-decoration: none;
+  z-index: 6;
+  -moz-transform: rotate(-90deg) translateY(0.5em);
+  -ms-transform: rotate(-90deg) translateY(0.5em);
+  -webkit-transform: rotate(-90deg) translateY(0.5em);
+  transform: rotate(-90deg) translateY(0.5em);
+  @media #{$small-only} {
+    // transform: none;
+    margin-top: 70px;
+    margin-left: -68px;
+   }
+}
+.titleLogoB {
+  display: block;
+  h1 {
+    a{
+      color: $dark;
+      font-size: 22px;
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      @media #{$small-only} {
+        font-size: 18px;
+       }
+    }
+  }
+  margin-top: 70px;
+  float: left;
+  margin-left: -80px;
+  position: fixed;
+  list-style: none;
+  text-decoration: none;
+  z-index: 6;
+  -moz-transform: rotate(-90deg) translateY(0.5em);
+  -ms-transform: rotate(-90deg) translateY(0.5em);
+  -webkit-transform: rotate(-90deg) translateY(0.5em);
+  transform: rotate(-90deg) translateY(0.5em);
+  @media #{$small-only} {
+    display: none;
+    margin-top: 70px;
+    margin-left: -68px;
+   }
+}
+.titleLogo2 {
+  h1 {
+    a{
+      color: white;
+      font-size: 22px;
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      @media #{$small-only} {
+        font-size: 18px;
+       }
+    }
+  }
+  margin-top: 10px;
+  float: left;
+  margin-left: -80px;
+  position: fixed;
+  list-style: none;
+  text-decoration: none;
+  z-index: 6;
+  -moz-transform: rotate(-90deg) translateY(0.5em);
+  -ms-transform: rotate(-90deg) translateY(0.5em);
+  -webkit-transform: rotate(-90deg) translateY(0.5em);
+  transform: rotate(-90deg) translateY(0.5em);
+  @media #{$small-only} {
+    margin-top: 70px;
+    margin-left: -68px;
+   }
+}
+.titleLogo3 {
+  display: none;
+  h1 {
+    a{
+      color: white;
+      font-size: 22px;
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      @media #{$small-only} {
+        font-size: 18px;
+       }
+    }
+  }
+  margin-top: 10px;
+  float: left;
+  margin-left: -80px;
+  position: fixed;
+  list-style: none;
+  text-decoration: none;
+  z-index: 6;
+  -moz-transform: rotate(-90deg) translateY(0.5em);
+  -ms-transform: rotate(-90deg) translateY(0.5em);
+  -webkit-transform: rotate(-90deg) translateY(0.5em);
+  transform: rotate(-90deg) translateY(0.5em);
+  @media #{$small-only} {
+    display: block;
+    margin-top: 70px;
+    margin-left: -68px;
+   }
+}
+.vertical_ticker {
+  position: fixed;
+  right: 57px;
+  bottom: 20px;
+  -moz-transform: rotate(-90deg) translateY(0.5em);
+  -ms-transform: rotate(-90deg) translateY(0.5em);
+  -webkit-transform: rotate(-90deg) translateY(0.5em);
+  transform: rotate(-90deg) translateY(0.5em);
+  @media #{$small-only} {
+    display: none;
+   }
+}
+.frontpageUndertitle2 {
+  display: flex;
+  position: fixed;
+}
+.frontpageUndertitle2 h2 {
+  margin: 0;
+  font-size: 20px;
+  left: 200px;
+  bottom: 50px;
+  color: $dark;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+.frontpageUndertitle2 .line2 {
+  margin: 18px 30px 0 30px;
+  background-color: $green;
+  width: 3px;
+  height: 140px;
+  position: fixed;
+  bottom: -84px;
+  left: 190px;
+  -moz-transform: rotate(-90deg) translateY(0.5em);
+  -ms-transform: rotate(-90deg) translateY(0.5em);
+  -webkit-transform: rotate(-90deg) translateY(0.5em);
+  transform: rotate(-90deg) translateY(0.5em);
+}
+.scroller2 {
+  height: 30px;
+  width: 400px;
+  float: left;
+  margin-left: 170px;
+  overflow: hidden;
+}
+.scroller2 span {
+  display: block;
+  font-size: 20px;
+  color: $dark;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+#footer-container {
+  border: none;
+  overflow: hidden;
+}
+.title-bar {
+  display: none;
+}
+.menu-icon-thork {
+  @media #{$small-only} {
+    margin-top: 25px;
+   }
+}
+.container {
+  @media #{$small-only} {
+    margin-top: -25px;
+    overflow: hidden;
+    min-width: 100vw;
+   }
+}

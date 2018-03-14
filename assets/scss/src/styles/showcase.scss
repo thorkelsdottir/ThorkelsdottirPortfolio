@@ -1,0 +1,91 @@
+.pageTitleShowcase {
+  text-decoration: none;
+  position: fixed;
+  margin-left: 12%;
+  h1 {
+    font-size: 110px;
+    line-height: 1.25;
+    font-weight: 700;
+    @media #{$small-only} {
+      font-size: 40px;
+     }
+  }
+  color: #9effea;
+  font-family: 'Maven Pro', sans-serif;
+  opacity: 1;
+  top: 14%;
+  @media #{$small-only} {
+    margin-left: 19%;
+    top: 10%;
+   }
+}
+.active .pageTitleShowcase {
+  display: none;
+}
+.active .projectTitle {
+  display: none;
+}
+.work {
+  img {
+    width: 50%;
+    margin-left: 40%;
+    margin-top: 18%;
+    margin-bottom: 10%;
+    //box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    &:hover {
+      box-shadow: 12px 12px 0 $pink, 0 0 0 $pink;
+    }
+    @media #{$small-only} {
+      width: 80%;
+      margin-top: 65%;
+      margin-bottom: 2%;
+      margin-left: 20%;
+     }
+  }
+}
+.post {
+	margin-right: 50px;
+	margin-bottom: 20px;
+  @media #{$small-only} {
+    margin-right: 0;
+    margin-bottom: 0;
+   }
+}
+#date {
+	position: fixed;
+	top: 49%;
+	left: 10%;
+	width: 500px;
+  z-index: 5;
+  font-size: 80px;
+  line-height: 1.25;
+  color: $dark;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  margin-left: 100px;
+  @media #{$small-only} {
+    font-size: 26px;
+    top: 34%;
+    left: -11%;
+   }
+}
+.active #date {
+  display: none;
+}
+.black-line {
+  width: 16%;
+  height: 12px;
+  background: $dark;
+  position: fixed;
+  left: 0;
+  top: 55%;
+  @media #{$small-only} {
+    width: 14%;
+    top: 36%;
+    height: 5px;
+   }
+}
+.active .black-line {
+  display: none;
+}

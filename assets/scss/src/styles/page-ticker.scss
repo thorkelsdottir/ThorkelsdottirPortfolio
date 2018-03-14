@@ -1,0 +1,22 @@
+/*undirfyrirsögn*/
+.ticker_item span {
+  display: none;
+  z-index: 100;
+}
+.scroller {
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  margin-left: 7px;
+  overflow: hidden;
+  @media #{$small-only} {
+    margin-left: 0;
+   }
+}
+.scroller span {
+  display: block;
+  font-size: 22px;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
